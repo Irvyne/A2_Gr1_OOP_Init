@@ -1,0 +1,19 @@
+{
+    "name": "irvyne/a2_gr1_oop_init",
+    "require": {
+        "cocur/slugify": "~1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thibaud BARDIN",
+            "email": "thibaud.bardin@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Cartman\\Init\\": "src"
+        }
+    }
+}
