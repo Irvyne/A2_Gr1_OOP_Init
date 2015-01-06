@@ -41,4 +41,16 @@ interface PokemonInterface
      * @return int
      */
     public function removeHP($hp);
+
+    /**
+     * @return int
+     */
+    public function getType();
+
+    /**
+     * @param int $type
+     *
+     * @return PokemonInterface
+     */
+    public function setType($type);
 }

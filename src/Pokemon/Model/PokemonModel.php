@@ -16,6 +16,18 @@ abstract class PokemonModel implements PokemonInterface
     private $hp;
 
     /**
+     * @var int
+     */
+    private $type;
+
+    const TYPE_FIRE     = 0;
+    const TYPE_WATER    = 1;
+    const TYPE_PLANT    = 2;
+    const TYPE_ELECTRIC = 3;
+    const TYPE_PSY      = 4;
+    const TYPE_NORMAL   = 5;
+
+    /**
      * @inheritdoc
      */
     public function getName()
@@ -81,7 +93,7 @@ abstract class PokemonModel implements PokemonInterface
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      *
      * @throws \Exception
      */
@@ -94,4 +106,49 @@ abstract class PokemonModel implements PokemonInterface
 
         return $this->hp;
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @return PokemonModel
+     *
+     * @throws \Exception
+     */
+    public function setType($type)
+    {
+        if (true === in_array($type, [
+            self::TYPE_FIRE,
+            self::TYPE_WATER,
+            self::TYPE_PLANT,
+            self::TYPE_ELECTRIC,
+            self::TYPE_PSY,
+            self::TYPE_NORMAL,
+        ]))
+            $this->type = $type;
+        else
+            throw new \Exception('Type => Bad');
+
+        return $this;
+    }
+
+    /**
+     * @param int $type
+     *
+     * @return bool
+     */
+    abstract public function isTypeWeak($type);
+
+    /**
+     * @param int $type
+     * @return bool
+     */
+    abstract public function isTypeStrong($type);
 }
