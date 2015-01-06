@@ -1,5 +1,7 @@
 <?php
 
+namespace Cartman\Init;
+
 class Article
 {
     /**

@@ -1,12 +1,12 @@
 <?php
 
 require __DIR__.'/vendor/autoload.php';
-require __DIR__.'/src/Article.php';
+
+use Cartman\Init\Article;
+use Cocur\Slugify\Slugify;
 
 $article = new Article();
-$slugify = new \Cocur\Slugify\Slugify();
-
-"Cocur/Slugify/Slugify.php";
+$slugify = new Slugify();
 
 $title = 'zefzefze zejkfbi ebfze &(-sdv  jlnô ü efihn Jinflazd ';
 
