@@ -22,16 +22,22 @@ class Article
 
     /**
      * @var string
+     *
+     * @Column(name="title", type="string", length=60)
      */
     private $title;
 
     /**
      * @var string
+     *
+     * @Column(name="slug", type="string", length=60)
      */
     private $slug;
 
     /**
      * @var int
+     *
+     * @Column(name="status", type="smallint")
      */
     private $status;
 
