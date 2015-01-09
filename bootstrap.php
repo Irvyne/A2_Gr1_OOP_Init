@@ -7,7 +7,6 @@ use Doctrine\ORM\EntityManager;
 
 $paths = [
     "src",
-    "src/Pokemon",
 ];
 $isDevMode = true;
 
@@ -16,4 +15,4 @@ $dbParams = include __DIR__.'/config/config.php';
 
 $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
 
-$entityManager = EntityManager::create($dbParams, $config);
+return EntityManager::create($dbParams, $config);

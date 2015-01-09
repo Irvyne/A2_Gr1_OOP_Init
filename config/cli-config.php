@@ -1,13 +1,5 @@
 <?php
 
-require __DIR__.'/../vendor/autoload.php';
+$entityManager = require __DIR__.'/../bootstrap.php';
 
-use Doctrine\DBAL\Tools\Console\ConsoleRunner;
-
-$config = new \Doctrine\DBAL\Configuration();
-
-$connectionParams = include __DIR__.'/config.php';
-
-$connection = \Doctrine\DBAL\DriverManager::getConnection($connectionParams, $config);
-
-return ConsoleRunner::createHelperSet($connection);
+return \Doctrine\ORM\Tools\Console\ConsoleRunner::createHelperSet($entityManager);

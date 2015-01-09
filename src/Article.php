@@ -2,10 +2,21 @@
 
 namespace Cartman\Init;
 
+/**
+ * Class Article
+ * @package Cartman\Init
+ *
+ * @Entity
+ * @Table(name="article")
+ */
 class Article
 {
     /**
      * @var int
+     *
+     * @Id
+     * @GeneratedValue(strategy="AUTO")
+     * @Column(name="id", type="integer")
      */
     private $id;
 
