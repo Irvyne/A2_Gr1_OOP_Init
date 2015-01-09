@@ -56,23 +56,6 @@ class Article
     }
 
     /**
-     * @param int $id
-     *
-     * @return Article
-     *
-     * @throws Exception
-     */
-    public function setId($id)
-    {
-        if (is_int($id) && $id > 0)
-            $this->id = $id;
-        else
-            throw new Exception('Id must be an integer and > 0');
-
-        return $this;
-    }
-
-    /**
      * @return string
      */
     public function getTitle()
@@ -85,14 +68,14 @@ class Article
      *
      * @return Article
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function setTitle($title)
     {
         if (is_string($title))
             $this->title = $title;
         else
-            throw new Exception('Title must be a string');
+            throw new \Exception('Title must be a string');
 
         return $this;
     }
@@ -110,14 +93,14 @@ class Article
      *
      * @return Article
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function setSlug($slug)
     {
         if (is_string($slug))
             $this->slug = $slug;
         else
-            throw new Exception('Slug must be a string');
+            throw new \Exception('Slug must be a string');
 
         return $this;
     }
@@ -135,7 +118,7 @@ class Article
      *
      * @return Article
      *
-     * @throws Exception
+     * @throws \Exception
      */
     public function setStatus($status)
     {
@@ -146,7 +129,7 @@ class Article
         ]))
             $this->status = $status;
         else
-            throw new Exception('Status is not valid');
+            throw new \Exception('Status is not valid');
 
         return $this;
     }
