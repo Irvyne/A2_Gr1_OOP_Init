@@ -23,14 +23,14 @@ class User
     /**
      * @var string
      *
-     * @Column(name="username", type="string", length=50)
+     * @Column(name="username", type="string", length=50, unique=true)
      */
     private $username;
 
     /**
      * @var string
      *
-     * @Column(name="title", type="string", length=25)
+     * @Column(name="password", type="string", length=25)
      */
     private $password;
 
@@ -52,10 +52,14 @@ class User
 
     /**
      * @param string $username
+     *
+     * @return User
      */
     public function setUsername($username)
     {
         $this->username = $username;
+
+        return $this;
     }
 
     /**
@@ -68,9 +72,13 @@ class User
 
     /**
      * @param string $password
+     *
+     * @return User
      */
     public function setPassword($password)
     {
         $this->password = $password;
+
+        return $this;
     }
 }
