@@ -11,7 +11,6 @@ $slugify = new Slugify();
 $title = 'zefzefze zejkfbi ebfze &(-sdv  jlnô ü efihn Jinflazd ';
 
 $article
-    ->setId(4)
     ->setTitle($title)
     ->setSlug($slugify->slugify($title))
     ->setStatus(Article::STATUS_PENDING)

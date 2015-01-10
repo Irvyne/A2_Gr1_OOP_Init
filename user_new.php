@@ -5,10 +5,11 @@ session_start();
 /**
  * Protection
  */
-/*if (empty($_SESSION['connected'])) {
-    echo 'Forbidden !';
+if (empty($_SESSION['connected'])) {
+    //echo 'Forbidden !';
+    header('Location: index.php');
     die;
-}*/
+}
 
 /** @var \Doctrine\ORM\EntityManager $em */
 $em = require __DIR__.'/bootstrap.php';
@@ -65,14 +66,6 @@ if (null !== $username && null !== $password) {
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
-        <label for="username">Username: </label>
-        <input type="text" id="username" name="username" required autofocus>
-        <br>
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <input type="submit" value="Créer User!">
-    </form>
+    {% block body %}{% enblock %}
 </body>
 </html>
