@@ -2,7 +2,7 @@
 
 ## Instructions
 
-* Date: Sunday 18th January by 23:59 (I want u to take ur time to understand REALLY what ur doing)
+* Date: Sunday ~~18th~~ **25th** January by 23:59 (I want u to take ur time to understand REALLY what ur doing)
 * Create your own repository on GitHub => https://github.com/YourUsername/A2_PHP_OOP_GR1
 * Send me an email (thibaud.bardin+iim[at]gmail[dot]com) with A2_PHP_OOP_GR1_FIRSTNAME_LASTNAME as Subject and the url of ur repository as Content
 
